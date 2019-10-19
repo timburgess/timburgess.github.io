@@ -8,6 +8,9 @@ import StackOverflowIcon from '../icons/StackOverflowIcon'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    height: '4rem',
+  },
   radioGroup: {
     margin: theme.spacing(1, 0),
   },
@@ -44,7 +47,7 @@ const actions = [
   },
 ]
 
-const SpeedDials = ()  => {
+const SpeedDials = () => {
   const classes = useStyles()
   const [open, setOpen] = useState(false)
 
@@ -57,7 +60,7 @@ const SpeedDials = ()  => {
   }
 
   return (
-    <div className={classes.exampleWrapper}>
+    <div className={classes.root}>
       <SpeedDial
         ariaLabel="SpeedDial example"
         className={classes.speedDial}
@@ -66,7 +69,7 @@ const SpeedDials = ()  => {
         onOpen={handleOpen}
         open={open}
         direction="up"
-        FabProps={{ color: 'default' }}
+        FabProps={{ color: 'inherit' }}
       >
         {actions.map(action => (
           <SpeedDialAction

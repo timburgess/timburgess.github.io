@@ -4,22 +4,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto 1rem auto;
-  font-size: 26px;
+  margin: var(--header-height) 1rem auto;
   font-weight: 300;
   letter-spacing: 0.05rem;
   text-align: left;
-
 }
 
 p {
   margin-top: 0;
+  font-size: 0.9rem;
 }
 
 @media screen and (min-width: 600px) {
   p {
     margin-left: 3rem;
     margin-right: 3rem;
+    font-size: 1rem;
   }
 
   p:last-of-type {

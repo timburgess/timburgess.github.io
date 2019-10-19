@@ -1,7 +1,13 @@
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: #fff;
+
   display: flex;
-  justify-content: space-between;
-  margin: 2rem 1rem 2rem 1rem;
+  justify-content: space-around;
 }
 
 @media screen and (min-width: 600px) {
