@@ -8,6 +8,8 @@
 
 body {
   margin: 0;
+  background-color: #fff !important;
+  scrollbar-width: none; /* hide scrollbar in firefox */
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
@@ -16,23 +18,39 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 }
 
-#root {
-  /* height: 100vh; fallback for browsers that do not support custom properties */
-  /* height: calc(var(--vh, 1vh) * 100); */
-}
-
 /* pages other than projects are fixed & we flexbox-grow the main div */
-.fixpage {
+.fixedpage {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* override mui default button */
-button {
-  background: #fff !important;
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+} */
+
+
+/* no scrollbar + white in safari and chrome */
+::-webkit-scrollbar { 
+  display: none;
+  background-color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+/* hide scrollbar in mobile */
+::-webkit-scrollbar-track {
+  background-color: #fff;
 }
+
+::-webkit-scrollbar {
+  background-color: #fff;
+  /* background-color: transparent; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  /* background-color: transparent; */
+}
+
+/* remove btn focus outlines from firefox */
+:focus { outline:none; }
+::-moz-focus-inner { border:0; }

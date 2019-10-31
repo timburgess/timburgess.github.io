@@ -15,8 +15,8 @@ const App = () => {
 
   return (
     <CssBaseline>
-      <div className={cx({ fixpage: page !== 'projects' })}>
-        <Header setPage={setPage} />
+      <Header setPage={setPage} />
+      <div className={cx({ fixedpage: page !== 'projects' })}>
         {page === 'home' && <Home setPage={setPage} />}
         {page === 'projects' && <Projects setPage={setPage} />}
         {page === 'about' && <About setPage={setPage} />}

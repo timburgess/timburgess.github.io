@@ -1,20 +1,21 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { ReactTypeformEmbed } from 'react-typeform-embed'
+// import { makeStyles } from '@material-ui/core/styles'
 import './Contact.css'
-import Footer from './Footer'
+
+const widgetStyle = {
+  top: 'var(--header-height)',
+}
 
 const Contact = () => (
-  <Fragment>
-    <div className="contact">
-      <ul>
-        <li>email</li>
-        <li>timburgess at mac.com</li>
-        <li>mobile</li>
-        <li>NZ  +64-225-804-656</li>
-        <li>Aust  +61-448-793-972</li>
-      </ul>
-    </div>
-    <Footer />
-  </Fragment>
+  <div className="contact">
+    <ReactTypeformEmbed style={widgetStyle} url="https://timburgess.typeform.com/to/BpW289" />
+    {/* <div className="contact-details">
+          <div>Contact</div>
+          <div>NZ 022-580-4656</div>
+          <div>Aust 0448-793-972</div>
+        </div> */}
+  </div>
 )
 
 export default Contact

@@ -5,22 +5,23 @@ header {
   right: 0;
   height: var(--header-height);
   background: #fff;
-
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  z-index: 1;
 }
 
 @media screen and (min-width: 600px) {
   header {
     justify-content: center;
   }
-  header > button {
+  header > button, header > a {
     margin-left: 3rem;
     margin-right: 3rem;
   }
 }
 
-button {
+header > button, header > a {
   background: none !important;
   border: none;
   padding: 0 !important;
@@ -31,6 +32,6 @@ button {
   cursor: pointer;
 }
 
-button:focus {
+header > button:focus {
   outline: none;
 }
